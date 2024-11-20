@@ -93,19 +93,25 @@ public class class5Lab {
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
 
             // Read the single line from the file
-            
+            String line1 = reader.readLine();
 
             // Replace every occurence of "Zz" with the empty string, to get rid of it.
-            
+            String line2 = line1.replace("Zz", "");
 
             // Replace every occurence of "yY" with a space, to establish words.
-            
+            String line3 = line2.replace("yY", " ");
 
             // Split the line by the characters "XX" to get each line of the poem in an array
-            
+            String[] lines = line3.split("XX");
 
             
-            
+            for (String line : lines) {
+                lineStack.push(line);
+                lineQueue.enqueue(line);
+                if (line.length() > maxLineLength) {
+                    maxLineLength = line.length();
+                }
+            }
 
             // close the BufferedReader
             reader.close();
