@@ -20,19 +20,21 @@ public class DataStructuresAndIO {
             stack.push(4);
             stack.push(5);
             stack.push(6);
-            stack.push(7);
+            //stack.push(7);
             stack.push(8);
             stack.push(9);
-            stack.push(10);
+            //stack.push(10);
             stack.push(11);
-            stack.push(12);
+            //stack.push(12);
 
             // Pop operation: Remove and return the top element of the stack
-            int topElement = stack.pop(); // Returns 3
+            stack.pop();
+            stack.pop();
+            
 
             // Peek operation: Return the top element without removing it
             int topWithoutRemoval = stack.peek(); // Returns 2
-
+            int topElement = stack.pop(); 
             System.out.println("Top element after pop: " + topElement);
             System.out.println("Current top element (peek): " + topWithoutRemoval);
         }
@@ -75,9 +77,9 @@ public class DataStructuresAndIO {
         public static void main(String[] args) {
             try {
                 // Code that might throw an exception
-                int result = 10 / 0;  // This will throw ArithmeticException
+                //int result = 10 / 0;  // This will throw ArithmeticException
                 int[] arr = new int[5];
-                arr[10] = 50; // This will throw ArrayIndexOutOfBoundsException
+                //arr[10] = 50; // This will throw ArrayIndexOutOfBoundsException
             } catch (ArithmeticException e) {
                 // Handle arithmetic errors, such as division by zero
                 System.out.println("Arithmetic error: " + e.getMessage());
